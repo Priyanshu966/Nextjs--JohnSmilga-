@@ -1,11 +1,11 @@
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 const HomePage = () => {
   return (
-    <>
-      <div className="text-6xl font-bold">HomePage</div>
-      <Link href="/about">AboutPage</Link>
-    </>
+    <main className='h-screen bg-slate-900'>
+      <Navbar />
+    </main>
   );
 };
 export default HomePage;

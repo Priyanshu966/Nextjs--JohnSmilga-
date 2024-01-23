@@ -1,25 +1,26 @@
 import Link from "next/link";
-
+import DrinksList from "@/components/DrinksList";
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
 
-const fetchData = async () =>{
+const fetchData = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   const resp = await fetch(`${url}`);
-  if (!resp.ok) {
-    throw new Error("There was an error in fetchin;g`")
-  }
-  const data = await resp.json();
-  
-  console.log(data);
-  return data;
-}
 
-const DrinksPage = () => {
-  const data = fetchData();
+  //For throwing error
+  if (!resp.ok) {
+    throw new Error("Failed to fetch drinks");
+  }
+
+  const data = await resp.json();
+  return data;
+};
+
+const DrinksPage = async () => {
+  const data = await fetchData();
   return (
     <>
-      <div className="text-6xl">DrinksPage</div>
-      <Link href="/">HomePage</Link>
+      <DrinksList drinks={data.drinks}/>
     </>
   );
 };

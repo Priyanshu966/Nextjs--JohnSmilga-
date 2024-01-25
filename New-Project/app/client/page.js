@@ -7,12 +7,10 @@ const ClientPage = () => {
   const [count,setCount] = useState(0);
   
   return (
-    <>
-      <div className="text-6xl">ClientPage</div>
-      <Link href="/">HomePage</Link>
-      <h1>{count}</h1>
-      <button className='btn'  onClick={() =>setCount(count + 1)}>click me</button>
-    </>
+    <div className="max-w-6xl mx-auto px-6 py-6">
+      <h4 className='text-6xl text-slate-300 font-bold my-4'>{count}</h4>
+      <button className='btn btn-accent font-bold capitalize text-xl'  onClick={() =>setCount(count + 1)}>click me</button>
+    </div>
   );
 };
 export default ClientPage;

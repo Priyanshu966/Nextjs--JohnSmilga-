@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className=" bg-slate-950 py-4">
       <div className='navbar max-w-6xl mx-auto px-6 flex-col md:flex-row'>
-        <button className="btn btn-primary uppercase md:mr-8">next.js</button>
+        <Link href='/' className="btn btn-primary uppercase md:mr-8">next.js</Link>
         <ul className="menu menu-horizontal capitalize text-slate-500">
           {links.map((link) => {
             const {id, label, href} = link;

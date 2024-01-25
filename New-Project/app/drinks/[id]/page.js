@@ -21,11 +21,13 @@ const singlePage = async ({params}) => {
 
   return (
     <div className="max-w-6xl mx-auto py-8 ">
-      <div className="card min-h-96 max-w-96 border-2 border-slate-400 shadow-lg shadow-slate-95">
+      <div className="card min-h-96 max-w-96 border-2 border-slate-900 shadow-lg shadow-slate-95 ring-2 ring-slate-800 ring-offset-2 ring-offset-slate-950 mx-auto sm:mx-0">
         <img src={image} alt={title} className="rounded-xl  h-80" />
         <div className="card-body">
           <h4 className="text-4xl font-bold text-slate-400">{title}</h4>
-          <Link href='/drinks' className='btn btn-accent mt-2'>Back</Link>
+          <Link href="/drinks" className="btn btn-accent mt-2">
+            Back
+          </Link>
         </div>
       </div>
     </div>

@@ -11,9 +11,9 @@ const DrinksList = ({drinks}) => {
           <li key={id}>
             <Link
               href={`/drinks/${id}`}
-              className="card min-h-96 border-2 border-slate-400 shadow-lg shadow-slate-950"
+              className="card min-h-96 border-2 border-slate-900 shadow-lg shadow-slate-950 ring-2 ring-slate-800 ring-offset-2 ring-offset-slate-950"
             >
-              <img src={image} alt={title} className='rounded-xl width-full h-80' />
+              <Image src={image} alt={title} priority width={320} height={300} className='rounded-xl  h-80' />
               <div className="card-body">
                 <h4 className="text-xl font-bold text-slate-400">{title}</h4>
               </div>

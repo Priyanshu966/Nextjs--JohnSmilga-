@@ -19,8 +19,8 @@ const Navbar = () => {
     },
     {
       id: 4,
-      label: "query",
-      href: "/query",
+      label: "prisma",
+      href: "/prisma-example",
     },
   ];
   return (

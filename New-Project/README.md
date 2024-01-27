@@ -830,7 +830,7 @@ model Task {
   createdAt DateTime @default(now())
   completed Boolean @default(false)
 }
-```
+````
 
 - safely applies and tracks changes to the database structure.
 
